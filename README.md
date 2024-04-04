@@ -2,9 +2,6 @@
 <br>
 
 <div>
-<img align="center" alt="Gibson-St2s" 
-src="https://github-readme-stats.vercel.app/api/top-langs/?username=gibsoncoutodev&layout=compact">
-<img align="center" alt="Gibson-Sts" 
 src="https://github-readme-stats.vercel.app/api?username=gibsoncoutodev&show_icons=true&theme=radical">
 </div> <br>
 <div style="display: inline_block"><br>
