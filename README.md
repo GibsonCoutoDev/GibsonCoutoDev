@@ -2,6 +2,7 @@
 <br>
 
 <div>
+<img align="center" alt="Gibson-sts"
 src="https://github-readme-stats.vercel.app/api?username=gibsoncoutodev&show_icons=true&theme=radical">
 </div> <br>
 <div style="display: inline_block"><br>
