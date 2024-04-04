@@ -4,7 +4,7 @@
 <div>
 ![Gibson Couto GitHub stats] () <br> <br>
 [![Gibson Couto] (https://github-readme-stats.vercel.app/api/top-langs/?username=gibsoncoutodev&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
-<img align="center" alt="Gibson-Sts" height="30" width="40" 
+<img align="center" alt="Gibson-Sts" 
 src="https://github-readme-stats.vercel.app/api?username=gibsoncoutodev&show_icons=true&theme=radical">
 </div> <br>
 <div style="display: inline_block"><br>
