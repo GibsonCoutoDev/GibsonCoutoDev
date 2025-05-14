@@ -7,4 +7,4 @@ Here are some of my GitHub stats:
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=GibsonCoutoDev&show_icons=true&hide_border=true&count_private=true&theme=dark)
 
-🎓 Total de horas estudadas (start 14/05/2025) : **{{TOTAL_HOURS}} horas** 
+
