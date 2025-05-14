@@ -1,0 +1,38 @@
+name: Stop Study
+
+on:
+  workflow_dispatch:
+
+jobs:
+  stop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Calculate session time
+        run: |
+          LAST_START=$(jq -r .last_start study_log.json)
+          NOW=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+
+          START_TS=$(date -d "$LAST_START" +%s)
+          NOW_TS=$(date -d "$NOW" +%s)
+          DIFF_MINUTES=$(( (NOW_TS - START_TS) / 60 ))
+
+          echo "Estudado agora: $DIFF_MINUTES minutos"
+
+          TOTAL=$(jq .total_minutes study_log.json)
+          NEW_TOTAL=$((TOTAL + DIFF_MINUTES))
+
+          jq --argjson total "$NEW_TOTAL" '.total_minutes = $total | .last_start = null' study_log.json > tmp.json && mv tmp.json study_log.json
+
+          TOTAL_HOURS=$(echo "scale=2; $NEW_TOTAL/60" | bc)
+          sed -i "s/{{TOTAL_HOURS}}.*/$TOTAL_HOURS/" README.md
+
+      - name: Commit update
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add study_log.json README.md
+          git commit -m "Stop study session and update total"
+          git push
